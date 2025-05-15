@@ -23,9 +23,9 @@ jobs:
     - name: Install .NET MAUI
       run: dotnet workload install maui
     - name: Restore dependencies
-      run: dotnet restore Foo.Bar.SampleApp.Net8.csproj
+      run: dotnet restore samples/Foo.Bar.SampleApp.Net8/Foo.Bar.SampleApp.Net8.csproj
     - name: Build
-      run: dotnet build Foo.Bar.SampleApp.Net8.csproj -c Release -f net8.0-android --no-restore
+      run: dotnet build samples/Foo.Bar.SampleApp.Net8/Foo.Bar.SampleApp.Net8.csproj -c Release -f net8.0-android --no-restore
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4
       with:
