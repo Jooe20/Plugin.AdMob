@@ -19,13 +19,13 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v2
       with:
-        dotnet-version: 9.0.x
+        dotnet-version: 8.0.x
     - name: Install .NET MAUI
       run: dotnet workload install maui
     - name: Restore dependencies
-      run: dotnet restore samples/Foo.Bar.SampleApp.Net9/Foo.Bar.SampleApp.Net9.csproj
+      run: dotnet restore samples/Foo.Bar.SampleApp.Net8/Foo.Bar.SampleApp.Net8.csproj
     - name: Build
-      run: dotnet build samples/Foo.Bar.SampleApp.Net9/Foo.Bar.SampleApp.Net9.csproj -c Release -f net9.0-android --no-restore
+      run: dotnet build samples/Foo.Bar.SampleApp.Net8/Foo.Bar.SampleApp.Net8.csproj -c Release -f net8.0-android --no-restore
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4
       with:
