@@ -46,7 +46,7 @@
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.100" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
 <PackageReference Include="Emgu.CV" Version="4.9.0.5494" />
-<PackageReference Include="Emgu.CV.runtime.maui.mini.ios" Version="4.9.0.5494" />of 
+<PackageReference Include="Emgu.CV.runtime.maui.mini.ios" Version="4.9.0.5494" />
 <PackageReference Include="Emgu.CV.runtime.maui.mini.android" Version="4.9.0.5494" />
 <PackageReference Include="Plugin.AdMob" Version="2.3.1" />	  
 </ItemGroup>
@@ -61,10 +61,10 @@
 	</ItemGroup>
 	
 	<Target Name="LinkWithSwift" DependsOnTargets="_ParseBundlerArguments;_DetectSdkLocations" BeforeTargets="_LinkNativeExecutable">
-		<PropertyGroup>
+		<!-- <PropertyGroup>
 			<_SwiftPlatform Condition="$(RuntimeIdentifier.StartsWith('iossimulator-'))">iphonesimulator</_SwiftPlatform>
 			<_SwiftPlatform Condition="$(RuntimeIdentifier.StartsWith('ios-'))">iphoneos</_SwiftPlatform>
-		</PropertyGroup>
+		</PropertyGroup>-->of all types 
 		<ItemGroup>
 			<_CustomLinkFlags Include="-L" />
 			<_CustomLinkFlags Include="/usr/lib/swift" />
