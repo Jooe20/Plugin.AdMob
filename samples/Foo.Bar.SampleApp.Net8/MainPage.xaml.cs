@@ -4,6 +4,9 @@ using Plugin.AdMob;
 using Plugin.AdMob.Services;
 using System.Diagnostics;
 using ServiceProvider = Foo.Bar.SampleApp.Services.ServiceProvider;
+using Emgu.CV;
+using Emgu.CV.CvEnum;
+using Emgu.CV.Structure;
 
 namespace Foo.Bar.SampleApp
 {
@@ -18,7 +21,7 @@ namespace Foo.Bar.SampleApp
         public MainPage()
         {
             InitializeComponent();
-
+Emgu.CV.CvInvokeAndroid.Init();
             _interstitialAdService = ServiceProvider.GetRequiredService<IInterstitialAdService>();
             _rewardedAdService = ServiceProvider.GetRequiredService<IRewardedAdService>();
             _rewardedInterstitialAdService = ServiceProvider.GetRequiredService<IRewardedInterstitialAdService>();
