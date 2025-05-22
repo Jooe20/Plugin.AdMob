@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0-android;net8.0-ios</TargetFrameworks>
+		<TargetFrameworks>net8.0-android;</TargetFrameworks>
 		<OutputType>Exe</OutputType>
 		<RootNamespace>Foo.Bar.SampleApp.Net8</RootNamespace>
 		<UseMaui>true</UseMaui>
@@ -19,7 +19,7 @@
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
 
-		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>
+		<!--<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">11.0</SupportedOSPlatformVersion>-->
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
@@ -59,11 +59,11 @@
 	  </MauiXaml>
 	</ItemGroup>
 	
-	<Target Name="LinkWithSwift" DependsOnTargets="_ParseBundlerArguments;_DetectSdkLocations" BeforeTargets="_LinkNativeExecutable">
-		<!-- <PropertyGroup>
+	<!--<Target Name="LinkWithSwift" DependsOnTargets="_ParseBundlerArguments;_DetectSdkLocations" BeforeTargets="_LinkNativeExecutable">
+		 <PropertyGroup>
 			<_SwiftPlatform Condition="$(RuntimeIdentifier.StartsWith('iossimulator-'))">iphonesimulator</_SwiftPlatform>
 			<_SwiftPlatform Condition="$(RuntimeIdentifier.StartsWith('ios-'))">iphoneos</_SwiftPlatform>
-		</PropertyGroup>-->
+		</PropertyGroup>
 		<ItemGroup>
 			<_CustomLinkFlags Include="-L" />
 			<_CustomLinkFlags Include="/usr/lib/swift" />
@@ -72,5 +72,5 @@
 			<_CustomLinkFlags Include="-Wl,-rpath" />
 			<_CustomLinkFlags Include="-Wl,/usr/lib/swift" />
 		</ItemGroup>
-	</Target>
+	</Target>-->
 </Project>
