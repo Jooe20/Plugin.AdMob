@@ -64,7 +64,7 @@
 		<!-- <PropertyGroup>
 			<_SwiftPlatform Condition="$(RuntimeIdentifier.StartsWith('iossimulator-'))">iphonesimulator</_SwiftPlatform>
 			<_SwiftPlatform Condition="$(RuntimeIdentifier.StartsWith('ios-'))">iphoneos</_SwiftPlatform>
-		</PropertyGroup>-->of all types 
+		</PropertyGroup>-->
 		<ItemGroup>
 			<_CustomLinkFlags Include="-L" />
 			<_CustomLinkFlags Include="/usr/lib/swift" />
